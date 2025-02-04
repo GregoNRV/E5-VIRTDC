@@ -25,9 +25,7 @@ metadata:
   name: stripe-secret
   namespace: rocket-eval
 type: Opaque
-# Pour mettre les secrets en claires, il faut utiliser "stringData:", sinon, il va falloir les hasher en base64
 stringData:
-#data:
   STRIPE_PUBLISHABLE_KEY: pk_test_51QkNzwP4DAK6wyNeh4H8hTqHzzvG5kUHb0gWwmLKVQerrYcBXD1fw1QxPwKg3Jum316NQyS8zMVvvHDePwqKeJPC00TMqRfZ9C
   STRIPE_SECRET_KEY: sk_test_51QkNzwP4DAK6wyNeq8cCUdiXIlxe1StTRGLhkuK9I0xUEjY9K8dWlVR5O3CJehWCv3PuINgjaTZSgtMVcC8hefbm000mFFMaab
 ---
@@ -36,7 +34,6 @@ kind: Deployment
 metadata:
   name: rocket-deployment
   namespace: rocket-eval
-  # Labels du deployment
   labels:
     app: django
     env: preprod
@@ -48,7 +45,6 @@ spec:
   replicas: 1
   template:
     metadata:
-      # Labels des pods
       labels:
         app: django
         env: preprod
@@ -67,16 +63,12 @@ spec:
             cpu: 300m
         envFrom:
         - configMapRef:
-            # nom de la configMap
             name: rocket-configmap
         env:
-          # nom de la variable qui sera injectée
           - name: STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
-                # nom de l'objet secret
                 name: stripe-secret
-                # nom du secret précis
                 key: STRIPE_PUBLISHABLE_KEY
           - name: STRIPE_SECRET_KEY
             valueFrom:
@@ -97,7 +89,6 @@ spec:
   ports:
   - port: 5005
     targetPort: 5005
-    # nodePort: 30001
     name: django-np
 ---
 apiVersion: networking.k8s.io/v1
