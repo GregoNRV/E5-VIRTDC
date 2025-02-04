@@ -9,19 +9,6 @@ BRUNEL Grégory
 <!-- TABLE OF CONTENTS --> <details> <summary>Table des matières</summary> <ol> <li><a href="#structure-du-projet">Structure du projet</a></li> <li><a href="#configurations">Configurations</a></li><li><a href="#etape-du-build">Étape du build</a></li><li><a href="#quelques-interfaces">Quelques Interfaces</a></li> </ol> </details>
 
 
-
-<!-- ABOUT THE PROJECT -->
-## Struture du projet
-
-Voici la structure du projet:
-
-Composants Utilisés
-``` bash
-Kubernetes
-```
-``` bash
-Pods : Conteneurisation des applications
-```
 Contenu du manifest.yaml
 ```bash
 
@@ -148,9 +135,10 @@ spec:
         averageUtilization: 50
 ```
 Problèmes rencontrés :
-
+![alt text](erreur.png)
 Impossible d'accéder à l'application sur internet, malgrès plusieurs essaies, je n'ai pas réussi à trouvé d'ou venez le soucis. 
-
+Même en réalisant un "K delete" et en recommencant, rien n'a changé
+J'ai aussi essayé d'enlever le pod autoscaler voir si le soucis venez de la mais non. 
 
 ## Manifest réalisé hier fonctionnel. 
 
@@ -255,36 +243,8 @@ spec:
 Preuve du fonctionnement : 
 
 <!-- GETTING STARTED -->
-## Etape du build
 
-### Pour déployer les applications du répertoire "devoir":
-
-``` bash
-Définition de l'architecture : Identification des composants et interactions
-```
-``` bash
-Configuration de Kubernetes : Mise en place des namespaces, deployments, services
-```
-``` bash
-Intégration de Stripe : Configuration de l'API avec secrets et configMaps
-```
-``` bash
-Gestion du scaling : Implémentation du HPA pour ajuster dynamiquement le nombre de pods
-```
-``` bash
-Tests de charge : Simulation de trafic et mesure des performances
-```
-``` bash
-Monitoring et Logging : Configuration de Prometheus et Grafana pour observer l'utilisation des ressources
-```
-``` bash
-Documentation et résultats : Explication des choix et analyse des performances
-```
-
-<!-- GETTING STARTED -->
-## Etape du build
-
-### Pour déployer les applications du répertoire "devoir":
+### Pour déployer les applications
 
 1- Exécuter la commande suivante pour mettre en place vos application avec le manifest:
 
@@ -300,15 +260,8 @@ k get all
 <!-- INTERFACES -->
 ## Quelques interfaces
 
-
-. Deploiment minikube commande
-![alt text](minikube.png)
-
-. Deploiment docker et application 
-![alt text](docker.png)
 . Redirection de port 
 ![alt text](ports.png)
-
 . Page d'acceuil application 
 ![alt text](acceuil.png)
 . Pade presentation produits
