@@ -6,8 +6,6 @@ BRUNEL Grégory
 <!-- PROJECT LOGO --> <br /> <div align="center"> <h3 align="center">Projet Kubernetes : Applications e-commerce </h3> <p align="center"> 
 
 
-<!-- TABLE OF CONTENTS --> <details> <summary>Table des matières</summary> <ol> <li><a href="#structure-du-projet">Structure du projet</a></li> <li><a href="#configurations">Configurations</a></li><li><a href="#etape-du-build">Étape du build</a></li><li><a href="#quelques-interfaces">Quelques Interfaces</a></li> </ol> </details>
-
 
 Contenu du manifest.yaml
 ```bash
@@ -264,7 +262,7 @@ k get all
 ![alt text](ports.png)
 . Page d'acceuil application 
 ![alt text](acceuil.png)
-. Pade presentation produits
+. Page presentation produits
 ![alt text](presentation.png)
 . Page de paiement 
 ![alt text](paiement.png)
