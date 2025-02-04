@@ -134,9 +134,7 @@ spec:
 ```
 Problèmes rencontrés :
 ![alt text](erreur.png)
-Impossible d'accéder à l'application sur internet, malgrès plusieurs essaies, je n'ai pas réussi à trouvé d'ou venez le soucis. 
-Même en réalisant un "K delete" et en recommencant, rien n'a changé
-J'ai aussi essayé d'enlever le pod autoscaler voir si le soucis venez de la mais non. 
+Impossible d'accéder à l'application sur Internet. Malgré plusieurs essais, je n'ai pas réussi à trouver d'où venait le problème. Même après avoir effectué un "K delete" et recommencé, rien n'a changé. J'ai également essayé de désactiver le pod autoscaler pour voir si le problème venait de là, mais ce n'était pas le cas.
 
 ## Manifest réalisé hier fonctionnel. 
 
