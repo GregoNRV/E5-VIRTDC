@@ -79,7 +79,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  # name: django-new-service
   name: rocket-service
   namespace: rocket-eval
 spec:
