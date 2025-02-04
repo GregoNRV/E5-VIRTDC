@@ -226,7 +226,7 @@ spec:
       port:
         number: 7777
 ```
-Preuve du fonctionnement : 
+Preuve du fonctionnement ci dessous :
 
 <!-- GETTING STARTED -->
 
