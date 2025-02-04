@@ -3,7 +3,7 @@ BRUNEL Grégory
 
 
 
-<!-- PROJECT LOGO --> <br /> <div align="center"> <h3 align="center">Projet Kubernetes : Applications e-commerce </h3> 
+<!-- PROJECT LOGO --> <br />Projet Kubernetes : Applications e-commerce </h3> 
 
 
 
