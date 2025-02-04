@@ -226,19 +226,33 @@ spec:
       port:
         number: 7777
 ```
-Preuve du fonctionnement ci dessous :
+Explication des différents composants utilisés : 
+
+Deployment : Objet Kubernetes qui gère le déploiement, la mise à jour et la scalabilité des Pods de manière déclarative.
+
+Service : Abstraction qui expose les Pods via une IP stable et permet la communication interne ou externe au cluster.
+
+Ingress : Point d'entrée HTTP/S qui route le trafic externe vers les Services selon des règles définies.
+
+ConfigMap : Stocke des configurations non sensibles sous forme de paires clé-valeur pour les injecter dans les Pods.
+
+Secret : Stocke des données sensibles (mots de passe, clés API) de manière sécurisée pour les injecter dans les Pods.
+
+Namespace : Espace logique pour isoler et organiser les ressources dans un cluster Kubernetes.
 
 <!-- GETTING STARTED -->
 
 ### Pour déployer les applications
+1- Démarrer Minikube : 
+![alt text](deb.png)
 
-1- Exécuter la commande suivante pour mettre en place vos application avec le manifest:
+2- Exécuter la commande suivante pour mettre en place vos application avec le manifest:
 
 ``` bash
 k create -f "nom du fichier.yaml" 
 ```
 
-2- Et vous pouvez voir vos application déployer en faisant:
+3- Et vous pouvez voir vos application déployer en faisant:
 
 ``` bash
 k get all
